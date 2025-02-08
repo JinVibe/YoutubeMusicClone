@@ -1,11 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Music Clone</title>
+  <!-- 나중에 CSS 파일을 연결할 예정 -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+  <!-- 헤더: 로고, 검색창, 사용자 메뉴 등 -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <h1>MyMusic</h1>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">홈</a></li>
+          <li><a href="#">탐색</a></li>
+          <li><a href="#">라이브러리</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="검색">
+      </div>
+    </div>
+  </header>
+
+  <!-- 사이드바: 메뉴 및 네비게이션 항목 -->
+  <aside>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#">홈</a></li>
+        <li><a href="#">트렌딩</a></li>
+        <li><a href="#">새로운 노래</a></li>
+        <!-- 필요에 따라 메뉴 추가 -->
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- 메인 콘텐츠: 추천, 차트, 앨범 목록 등 -->
+  <main>
+    <section class="content-section">
+      <h2>추천 플레이리스트</h2>
+      <!-- 플레이리스트 아이템 등을 나중에 추가 -->
+      <div class="playlist">
+        <!-- 예시 아이템 -->
+        <div class="playlist-item">플레이리스트 1</div>
+        <div class="playlist-item">플레이리스트 2</div>
+        <div class="playlist-item">플레이리스트 3</div>
+      </div>
+    </section>
+
+    <!-- 추가 섹션들 -->
+    <section class="content-section">
+      <h2>인기 차트</h2>
+      <!-- 차트 아이템들 -->
+      <div class="chart">
+        <div class="chart-item">노래 1</div>
+        <div class="chart-item">노래 2</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 플레이어: 하단의 음악 재생 컨트롤러 -->
+  <footer>
+    <div class="player">
+      <button class="prev">이전</button>
+      <button class="play">재생</button>
+      <button class="next">다음</button>
+      <!-- 추가 컨트롤 요소 -->
+    </div>
+  </footer>
 </body>
 </html>
