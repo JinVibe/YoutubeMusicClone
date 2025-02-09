@@ -1,0 +1,152 @@
+/* 기본 리셋: 모든 요소의 마진, 패딩 제거 및 박스 사이징 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 전체 페이지의 폰트와 배경 설정 */
+  body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    /* CSS Grid를 사용하여 전체 레이아웃을 구성 */
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+  
+  /* 헤더 영역 스타일 */
+  header {
+    grid-area: header;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 60px;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  /* 헤더 내 네비게이션 스타일 */
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .main-nav ul li {
+    margin-right: 20px;
+  }
+  
+  .main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  /* 검색창 스타일 */
+  .search-bar input {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* 사이드바 스타일 */
+  aside {
+    grid-area: sidebar;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+  }
+  
+  .sidebar-nav ul {
+    list-style: none;
+  }
+  
+  .sidebar-nav ul li {
+    margin-bottom: 15px;
+  }
+  
+  .sidebar-nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* 메인 콘텐츠 영역 스타일 */
+  main {
+    grid-area: main;
+    padding: 20px;
+  }
+  
+  .content-section {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .content-section h2 {
+    margin-bottom: 15px;
+  }
+  
+  /* 플레이리스트와 차트 항목 스타일 */
+  .playlist,
+  .chart {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .playlist-item,
+  .chart-item {
+    background: #e9e9e9;
+    padding: 10px;
+    border-radius: 4px;
+    /* 화면 크기에 따라 유동적으로 아이템 크기 설정 (예: 3개씩 한 줄 배치) */
+    flex: 1 1 calc(33.33% - 10px);
+    text-align: center;
+  }
+  
+  /* 푸터(플레이어) 스타일 */
+  footer {
+    grid-area: footer;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    padding: 10px 20px;
+  }
+  
+  .player {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .player button {
+    padding: 10px 15px;
+    border: none;
+    background: #0073e6;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .player button:hover {
+    background: #005bb5;
+  }
+  
